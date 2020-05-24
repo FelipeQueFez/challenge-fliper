@@ -32,6 +32,7 @@ dependencies:
   flutter_bloc: ^3.2.0
   equatable: ^1.1.1
   hasura_connect: ^1.2.1+1
+  flutter_money_formatter: ^0.8.3
 
 dev_dependencies:
   flutter_test:

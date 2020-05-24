@@ -12,7 +12,12 @@ class ResumeState extends Equatable {
     return ResumeState(
       loading: false,
       error: '',
-      data: new ResumeModel(),
+      data: new ResumeModel(
+        cdi: 0,
+        gain: 0,
+        profitability: 0,
+        total: 0,
+      ),
     );
   }
   ResumeState copyWith({

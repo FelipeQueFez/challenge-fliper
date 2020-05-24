@@ -1,12 +1,26 @@
 import 'package:challenge_fliper/app_colors.dart';
+import 'package:challenge_fliper/modules/hasura/models/resume_model.dart';
 import 'package:challenge_fliper/views/shared/spacer_box.dart';
 import 'package:challenge_fliper/views/shared/extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_money_formatter/flutter_money_formatter.dart';
 
 class ResumeCard extends StatelessWidget {
+  final ResumeModel model;
+
   const ResumeCard({
     Key key,
+    @required this.model,
   }) : super(key: key);
+
+  static MoneyFormatterSettings _formatterSettings = MoneyFormatterSettings(
+    symbol: 'R\$',
+    thousandSeparator: '.',
+    decimalSeparator: ',',
+    symbolAndNumberSeparator: ' ',
+    fractionDigits: 2,
+    compactFormatType: CompactFormatType.short,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +101,10 @@ class ResumeCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         "Ganho/mês".bodyText1(context),
-        "R\$1833,23".bodyText2(context),
+        FlutterMoneyFormatter(
+          amount: model.gain,
+          settings: _formatterSettings,
+        ).output.symbolOnLeft.bodyText2(context),
       ],
     );
   }
@@ -97,7 +114,7 @@ class ResumeCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         "CDI".bodyText1(context),
-        "3,45%".bodyText2(context),
+        "${model.cdi.toStringAsPrecision(3)} %".bodyText2(context),
       ],
     );
   }
@@ -107,7 +124,7 @@ class ResumeCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         "Rentabilidade/mês".bodyText1(context),
-        "2,767%".bodyText2(context),
+        "${model.profitability.toStringAsPrecision(3)} %".bodyText2(context),
       ],
     );
   }
@@ -117,7 +134,10 @@ class ResumeCard extends StatelessWidget {
       children: <Widget>[
         "Valor Investido".bodyText1(context),
         SpacerBox.v10,
-        "R\$3.200.876,00".bodyText2(context),
+        FlutterMoneyFormatter(
+          amount: double.parse(model.total.toString()),
+          settings: _formatterSettings,
+        ).output.symbolOnLeft.bodyText2(context),
       ],
     );
   }

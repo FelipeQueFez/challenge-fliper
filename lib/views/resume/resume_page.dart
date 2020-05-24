@@ -39,7 +39,7 @@ class _ResumePageState extends State<ResumePage> {
               if (state.loading) {
                 return CircularProgressIndicator();
               } else if (state.data != null) {
-                return ResumeCard();
+                return ResumeCard(model: state.data);
               } else {
                 return SizedBox.shrink();
               }
