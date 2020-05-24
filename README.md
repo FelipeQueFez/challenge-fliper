@@ -2,7 +2,9 @@
 
 A new Flutter project.
 
-[Download Demo](https://github.com/FelipeQueFez/challenge-fliper/tree/master/assets/app-release.apk)
+![](https://github.com/FelipeQueFez/challenge-fliper/tree/master/assets/demo.gif)
+
+[Download APK](https://github.com/FelipeQueFez/challenge-fliper/tree/master/assets/app-release.apk)
 
 ## Getting Started
 
