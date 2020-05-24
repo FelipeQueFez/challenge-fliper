@@ -114,7 +114,7 @@ class ResumeCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         "CDI".bodyText1(context),
-        "${model.cdi.toStringAsPrecision(3)} %".bodyText2(context),
+        "${model.cdi.toStringAsPrecision(3)}%".bodyText2(context),
       ],
     );
   }
@@ -124,7 +124,7 @@ class ResumeCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         "Rentabilidade/mês".bodyText1(context),
-        "${model.profitability.toStringAsPrecision(3)} %".bodyText2(context),
+        "${model.profitability.toStringAsPrecision(3)}%".bodyText2(context),
       ],
     );
   }
