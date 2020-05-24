@@ -15,6 +15,8 @@ class ResumePage extends StatefulWidget {
 
 class _ResumePageState extends State<ResumePage> {
   ResumeBloc _resumeBloc;
+  final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
+      new GlobalKey<RefreshIndicatorState>();
 
   @override
   void initState() {
@@ -26,24 +28,33 @@ class _ResumePageState extends State<ResumePage> {
   Widget build(BuildContext context) {
     return CustomScaffold(
       appBar: null,
-      child: CustomContainer(
-        child: Center(
-          child: BlocConsumer<ResumeBloc, ResumeState>(
-            bloc: _resumeBloc,
-            listener: (contextListener, state) {
-              if (state.error.isNotEmpty) {
-                _showMessage(contextListener, state.error);
-              }
-            },
-            builder: (context, state) {
-              if (state.loading) {
-                return CircularProgressIndicator();
-              } else if (state.data != null) {
-                return ResumeCard(model: state.data);
-              } else {
-                return SizedBox.shrink();
-              }
-            },
+      child: RefreshIndicator(
+        key: _refreshIndicatorKey,
+        onRefresh: () async {
+          _resumeBloc.add(ResumeEvent());
+        },
+        child: SingleChildScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          child: CustomContainer(
+            child: Center(
+              child: BlocConsumer<ResumeBloc, ResumeState>(
+                bloc: _resumeBloc,
+                listener: (contextListener, state) {
+                  if (state.error.isNotEmpty) {
+                    _showMessage(contextListener, state.error);
+                  }
+                },
+                builder: (context, state) {
+                  if (state.loading) {
+                    return CircularProgressIndicator();
+                  } else if (state.data != null) {
+                    return ResumeCard(model: state.data);
+                  } else {
+                    return SizedBox.shrink();
+                  }
+                },
+              ),
+            ),
           ),
         ),
       ),

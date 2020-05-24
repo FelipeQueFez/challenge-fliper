@@ -9,6 +9,7 @@ class CustomContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
+      height: MediaQuery.of(context).size.height,
       margin: EdgeInsets.all(15),
       child: child,
     );
