@@ -13,3 +13,6 @@ Projeto flutter para avaliação por parte da Fliper.
 - [Atualização de valores - Swipe to refresh](https://api.flutter.dev/flutter/material/RefreshIndicator-class.html)
 - Criado um tema com cores e formatações de labels para facilitar desenvolvimento.
 - Implementado um teste simples para verificar comunicação com hasura
+
+## OBS
+Faltou apenas incluir a font 'Proxima Nova', pelo o que eu pesquisei é uma fonte paga.
