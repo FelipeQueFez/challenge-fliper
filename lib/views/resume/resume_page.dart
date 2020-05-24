@@ -30,9 +30,9 @@ class _ResumePageState extends State<ResumePage> {
         child: Center(
           child: BlocConsumer<ResumeBloc, ResumeState>(
             bloc: _resumeBloc,
-            listener: (context, state) {
+            listener: (contextListener, state) {
               if (state.error.isNotEmpty) {
-                _showMessage(state.error);
+                _showMessage(contextListener, state.error);
               }
             },
             builder: (context, state) {
@@ -50,7 +50,7 @@ class _ResumePageState extends State<ResumePage> {
     );
   }
 
-  void _showMessage(String message) {
+  void _showMessage(BuildContext context, String message) {
     final snackBar = SnackBar(content: Text(message));
     Scaffold.of(context).showSnackBar(snackBar);
   }
