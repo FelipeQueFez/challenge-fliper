@@ -9,6 +9,7 @@ ThemeData getTheme(BuildContext context) {
         color: AppColors.primary,
         fontSize: 25,
         letterSpacing: 0.75,
+        fontWeight: FontWeight.bold,
       ),
       subtitle2: TextStyle(
         color: AppColors.primary,
@@ -24,6 +25,7 @@ ThemeData getTheme(BuildContext context) {
         color: AppColors.primary,
         fontSize: 18,
         letterSpacing: 0.54,
+        fontWeight: FontWeight.bold,
       ),
     ),
   );
