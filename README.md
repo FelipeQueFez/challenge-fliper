@@ -12,7 +12,8 @@ Projeto flutter para avaliação por parte da Fliper.
 - [Injeção de dependência - GetIt](https://pub.dev/packages/get_it)
 - [Atualização de valores - Swipe to refresh](https://api.flutter.dev/flutter/material/RefreshIndicator-class.html)
 - Criado um tema com cores e formatações de labels para facilitar desenvolvimento.
+- Implementado tratamento de erros caso haja alguma instabilidade com o hasura
 - Implementado um teste simples para verificar comunicação com hasura
 
 ## OBS
-Faltou apenas incluir a font 'Proxima Nova', pelo o que eu pesquisei é uma fonte paga.
+Faltou apenas incluir a fonte 'Proxima Nova', pelo o que eu pesquisei é uma fonte paga.
