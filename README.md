@@ -1,20 +1,12 @@
 # Challenge Fliper
 
-Build RPG games and similar with the power of [FlameEngine](https://flame-engine.org/)!
+Projeto flutter para avaliação por parte da Fliper.
 
-![](https://github.com/FelipeQueFez/challenge-fliper/tree/master/assets/demo.gif)
+[DOWNLOAD APK](https://github.com/FelipeQueFez/challenge-fliper/tree/master/assets/app-release.apk)
 
-[Download APK](https://github.com/FelipeQueFez/challenge-fliper/tree/master/assets/app-release.apk)
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+*Implementações Técnicas*
+- [Gerenciamento de estado escolhido - Bloc](https://pub.dev/packages/flutter_bloc)
+- [Formatação de valores monetários - flutter money formatter](https://pub.dev/packages/flutter_money_formatter)
+- [Injeção de dependência - GetIt](https://pub.dev/packages/get_it)
+- [Atualização de valores - Swipe to refresh](https://api.flutter.dev/flutter/material/RefreshIndicator-class.html)
+- Criado um tema com cores e formatações de labels para facilitar desenvolvimento.
