@@ -5,6 +5,7 @@ class AppColors {
   static const primary = Color(_codePrimary);
   static const background = Color(0xffE8EBF6);
   static const white = Color(0xffFFFFFF);
+  static const gray = Color(0xff606377);
 
   static MaterialColor theme = MaterialColor(_codePrimary, _primarySwatch);
 

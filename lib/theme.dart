@@ -4,24 +4,26 @@ import 'package:flutter/material.dart';
 ThemeData getTheme(BuildContext context) {
   return ThemeData(
     primarySwatch: AppColors.theme,
-    inputDecorationTheme: InputDecorationTheme(
-      border: UnderlineInputBorder(
-        borderSide: BorderSide(
-          color: AppColors.primary,
-          width: 1.5,
-        ),
+    textTheme: TextTheme(
+      headline6: TextStyle(
+        color: AppColors.primary,
+        fontSize: 25,
+        letterSpacing: 0.75,
       ),
-      focusedBorder: UnderlineInputBorder(
-        borderSide: BorderSide(
-          color: AppColors.primary,
-          width: 1.5,
-        ),
+      subtitle2: TextStyle(
+        color: AppColors.primary,
+        fontSize: 22,
+        letterSpacing: 0.66,
       ),
-      errorBorder: UnderlineInputBorder(
-        borderSide: BorderSide(
-          color: AppColors.primary,
-          width: 1.5,
-        ),
+      bodyText1: TextStyle(
+        color: AppColors.gray,
+        fontSize: 16,
+        letterSpacing: 0.48,
+      ),
+      bodyText2: TextStyle(
+        color: AppColors.primary,
+        fontSize: 18,
+        letterSpacing: 0.54,
       ),
     ),
   );
