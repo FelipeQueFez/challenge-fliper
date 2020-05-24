@@ -1,6 +1,8 @@
-# challenge_fliper
+# Challenge Fliper
 
 A new Flutter project.
+
+[Download Demo](https://github.com/FelipeQueFez/challenge-fliper/tree/master/assets/app-release.apk)
 
 ## Getting Started
 
